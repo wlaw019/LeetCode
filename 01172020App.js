@@ -109,15 +109,27 @@ reverse = (x) => {
 
   // console.log(parseInt(reversedInteger.join(""))*sign);
 
-  if (x===0) {
+
+   if (x===0) {
+    console.log(0);
     return 0;
+  } else if(x<Math.pow(2, 31)-1 && x> Math.pow(-2, 31)) {
+    if (parseInt(reversedInteger.join("")*sign)<Math.pow(2, 31)-1 && parseInt(reversedInteger.join("")*sign)> Math.pow(-2, 31)) {
+      console.log(parseInt(reversedInteger.join("")*sign));
+      return parseInt(reversedInteger.join("")*sign);
+    }else {
+      console.log(0);
+      return 0;
+    }
+
   } else {
-    return parseInt(reversedInteger.join("")*sign);
+    return 0;
   }
 
 }
 
-reverse(0);
+console.log("this is");
+reverse(2147483647);
 
 //////////////////////
 // 9) Pailindrome Number

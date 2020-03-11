@@ -39,6 +39,7 @@ merge = (intervals) => {
 
   console.log(intervals);
 
+
   for (var i = 0; i < intervals.length-1; i++) {
     for (var j = i+1; j < intervals.length; j++) {
       if (intervals[i][1]>=intervals[j][0]) {
